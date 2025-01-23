@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import ValidatorSignUp from "./pages/ValidatorSignUp";
 import Review from "./pages/Review";
@@ -11,7 +11,7 @@ import AddActivity from "./pages/add-activity";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route index element={<Home/>}/>
         <Route path="validatorSignUp" element={<ValidatorSignUp/>}/>
@@ -23,7 +23,7 @@ function App() {
         <Route path="profile" element={<Profile/>}/>
         <Route path="add-activity" element={<AddActivity/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
