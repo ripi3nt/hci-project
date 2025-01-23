@@ -1,0 +1,63 @@
+{
+  "categories": [
+    {
+      "category": "Courses",
+      "content": [
+        {
+          "name": "Kuhanje",
+          "description": "kuhanje lol",
+          "review": 5,
+          "comments": [
+            {
+              "user": "Janez Novak",
+              "body": "idk idk idk"
+            }
+          ]
+        },
+        {
+         "name": "MMA course",
+          "description": "u fight type shit",
+          "review": 2,
+          "comments": [
+            {
+              "user": "lojze",
+              "body": "my ass got kicked"
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "category": "Bars",
+      "content": [
+        {
+          "name": "Pub",
+          "description": "best beer in town",
+          "review": 4,
+          "comments": [
+            {
+              "user": "pussyenjoyer69",
+              "body": "i loved the place"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  ,
+  "liked": [
+        {
+          "name": "Pub",
+          "description": "best beer in town",
+          "review": 4,
+          "comments": [
+            {
+              "user": "pussyenjoyer69",
+              "body": "i loved the place"
+            }
+          ]
+        }
+  ],
+  "isModerator": false
+}
