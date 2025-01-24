@@ -1,8 +1,19 @@
-import { Avatar, Box, Stack, Typography, Rating, Button, TextField } from "@mui/material";
-import Favorite from "@mui/icons-material/Favorite";  // Import the Favorite icon
+import {
+  Avatar,
+  Stack,
+  Typography,
+  Rating,
+  Button,
+  TextField,
+} from "@mui/material";
+import Favorite from "@mui/icons-material/Favorite"; // Import the Favorite icon
 import { useParams, useNavigate } from "react-router-dom";
 import db from "../db/activies.json";
 import { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import markerIcon from "leaflet/dist/images/marker-icon.png"
+import marketShadow from "leaflet/dist/images/marker-shadow.png"
 
 const Review: React.FC = () => {
   const { reviewid } = useParams<{ reviewid: string }>();
@@ -24,18 +35,23 @@ const Review: React.FC = () => {
     }
   }
 
-  const [comments, setComments] = useState<{ user: string, body: string }[]>(activity!.comments);
+  const [comments, setComments] = useState<{ user: string; body: string }[]>(
+    activity!.comments
+  );
 
   const handleAddComment = () => {
     setComments([...comments, { user: "test user", body: newComment }]);
-    activity!.comments = [...activity!.comments, { user: "test user", body: newComment }];
+    activity!.comments = [
+      ...activity!.comments,
+      { user: "test user", body: newComment },
+    ];
     setNewComment(""); // Clear the comment input field after submission
   };
 
   const [isLiked, setLiked] = useState(false);
 
   const handleLike = () => {
-    setLiked(!isLiked);  // Toggle the like state
+    setLiked(!isLiked); // Toggle the like state
 
     db.liked = [...db.liked, activity!];
   };
@@ -50,11 +66,11 @@ const Review: React.FC = () => {
 
         {/* Like Button (Heart) */}
         <Button onClick={handleLike} variant="text">
-          <Favorite 
+          <Favorite
             sx={{
               color: isLiked ? "red" : "gray", // Change color based on isLiked state
-              transition: "color 0.3s",        // Smooth transition for color change
-            }} 
+              transition: "color 0.3s", // Smooth transition for color change
+            }}
           />
         </Button>
       </Stack>
@@ -65,24 +81,16 @@ const Review: React.FC = () => {
       </Button>
 
       {/* Map Placeholder */}
-      <Box
-        sx={{
-          width: "100%",
-          height: 200,
-          backgroundColor: "#f0f0f0",
-          borderRadius: 2,
-        }}
-      >
-        <Typography
-          variant="body1"
-          color="text.secondary"
-          textAlign="center"
-          lineHeight="200px"
-        >
-          [Map Placeholder]
-        </Typography>
-      </Box>
-
+      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{width: "100%", height: 200}}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={[51.505, -0.09]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer>
       {/* Rating and Recommendations */}
       <Stack direction="row" alignItems="center" spacing={2}>
         <Rating value={activity!.review} readOnly />
@@ -138,5 +146,10 @@ const Review: React.FC = () => {
     </Stack>
   );
 };
+
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  shadowUrl: marketShadow
+})
 
 export default Review;

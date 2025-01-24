@@ -8,6 +8,7 @@ import NotFound from "./pages/404";
 import Favourites from "./pages/favourites";
 import Profile from "./pages/profile";
 import AddActivity from "./pages/add-activity";
+import "leaflet/dist/leaflet.css"
 
 function App() {
   return (

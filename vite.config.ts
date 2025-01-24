@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/hci-project/",
   build: {
+    outDir: "./docs",
     rollupOptions: {
       output: {
         inlineDynamicImports: true,
