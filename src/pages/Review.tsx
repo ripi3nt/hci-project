@@ -46,12 +46,19 @@ const Review: React.FC = () => {
     setNewComment(""); // Clear the comment input field after submission
   };
 
-  const [isLiked, setLiked] = useState(false);
+  const likedStatus = db.liked.findIndex((el) => el.name == reviewid);
+  const [isLiked, setLiked] = useState(likedStatus == -1 ? false : true);
 
   const handleLike = () => {
+    const updatedLiked = !isLiked;
     setLiked(!isLiked); // Toggle the like state
 
-    db.liked = [...db.liked, activity!];
+    if(updatedLiked) {
+
+      db.liked = [...db.liked, activity!];
+    } else {
+      db.liked = db.liked.filter((el) => el.name !== reviewid);
+    }
   };
 
   return (
