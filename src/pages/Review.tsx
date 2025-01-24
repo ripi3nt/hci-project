@@ -12,8 +12,6 @@ import db from "../db/activies.json";
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import markerIcon from "leaflet/dist/images/marker-icon.png"
-import marketShadow from "leaflet/dist/images/marker-shadow.png"
 
 const Review: React.FC = () => {
   const { reviewid } = useParams<{ reviewid: string }>();
@@ -148,8 +146,7 @@ const Review: React.FC = () => {
 };
 
 L.Icon.Default.mergeOptions({
-  iconUrl: markerIcon,
-  shadowUrl: marketShadow
+  iconUrl: "/marker-icon.png",
 })
 
 export default Review;
