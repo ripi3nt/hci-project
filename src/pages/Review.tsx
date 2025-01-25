@@ -61,6 +61,8 @@ const Review: React.FC = () => {
     }
   };
 
+  const position: [number, number] = [parseFloat(activity!.location.Latitude), parseFloat(activity!.location.Longitude)];
+
   return (
     <Stack spacing={3} padding={2}>
       <Stack direction={"row"} justifyContent={"space-between"}>
@@ -85,14 +87,14 @@ const Review: React.FC = () => {
         {"<"} Back
       </Button>
 
-      {/* Map Placeholder */}
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{width: "100%", height: 200}}>
+      {/* Map */}
+      <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{width: "100%", height: 200}}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[51.505, -0.09]}>
+        <Marker position={position}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+          {activity?.name}
           </Popup>
         </Marker>
       </MapContainer>

@@ -1,63 +1,286 @@
 {
   "categories": [
     {
-      "category": "Courses",
+      "category": "Bars",
       "content": [
         {
-          "name": "Kuhanje",
-          "description": "kuhanje lol",
+          "name": "Bar Cameral",
+          "description": "best beer in town",
+          "location": {
+            "Latitude": "45.547323",
+            "Longitude": "13.729330"
+          },
           "review": 5,
           "comments": [
             {
-              "user": "Janez Novak",
-              "body": "idk idk idk"
+              "user": "Jaro- S",
+              "body": "excellent service, pleasant environment, great coffee and lemonade. we will definitely come back here. you can communicate in any language, the staff is very friendly"
+            },
+            {
+              "user": "Marko S",
+              "body": "Nice location in the old city center. Staff is kind and fast, super cozy place to get an excelent coffee or a very good craft beer."
+            },
+            {
+              "user": "Gaja G",
+              "body": "WE LOVE IT! Especially the musik and good environment eith friendly service those donuts with cream are super extra tasty."
+            },
+            {
+              "user": "FDaniel",
+              "body": "Some of the best craft beer in Koper and not that pricey too."
+            },
+            {
+              "user": "ursa p",
+              "body": "Great coffee, pleasant atmosphere, nice cosy inner ambience plus a terrace, very friendly staff, I definitely recommend :)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Hotel",
+      "content": [
+        {
+          "name": "Hostel Villa Domus",
+          "description": "Hostel Villa Domus is a nice and modern Hostel that was built in 2016 in the spirit of knowledge and education. In the summer months, the above-standard student house turns into a modern and comfortable hostel with different types of accommodation.",
+          "location": {
+            "Latitude": "45.5454803",
+            "Longitude": "13.7330527"
+          },
+          "review": 4,
+          "comments": [
+            {
+              "user": "sandukan876",
+              "body": "Beautiful Hostel in nice City Koper. Good price for excellent room. Koper has nice old part of the City, with a lot restaurants and kind people."
+            },
+            {
+              "user": "Iztok Z",
+              "body": "Super relaxing but short holidays with my famaly in this new hostel at slovenian coast. We were staying in the apartment with balcony. The view on Koper is amazing and the people are very kind. I suggest this hostel to everyone."
             }
           ]
         },
         {
-         "name": "MMA course",
-          "description": "u fight type shit",
-          "review": 2,
-          "comments": [
-            {
-              "user": "lojze",
-              "body": "my ass got kicked"
-            }
-          ]
-        }
-
-      ]
-    },
-    {
-      "category": "Bars",
-      "content": [
-        {
-          "name": "Pub",
-          "description": "best beer in town",
+          "name": "Hotel Grand Koper",
+          "description": "The amazing sea views from designer rooms. The palm shades that frame the city from above. The retro colours of the sunsets. So close you can almost touch them.",
+          "location": {
+            "Latitude": "45.547626",
+            "Longitude": "13.7259842"
+          },
           "review": 4,
           "comments": [
             {
-              "user": "pussyenjoyer69",
-              "body": "i loved the place"
+              "user": "Masa H",
+              "body": "Very nice hotel.  Clean and friendly staff.  Great food.  I was very positively surprised when I saw that pets are welcome."
+            },
+            {
+              "user": "Danja B",
+              "body": "Fantastic stay! The hotel was spotless, staff were friendly, and the location was perfect for exploring. Loved the comfy beds and great amenities. Highly recommend for a relaxing and enjoyable visit! Location is amazing, right at the coast"
+            },
+            {
+              "user": "TomBud",
+              "body": "Good location , nice clean renovated building . Vallet parking , very good service . Good pizza restaurant and a fancy restaurant in hotel . The staff , reception , concierge are very very nice . Old city above the hotel , a short walk right from hotel ."
+            },
+            {
+              "user": "Kim P",
+              "body": "Excellent hotel - staff second to none - nice rooms with an amazing view"
+            }
+          ]
+        },
+        {
+          "name": "Vodisek Hotel",
+          "description": "See why so many travelers make Vodisek Hotel their hotel of choice when visiting Koper. Providing an ideal mix of value, comfort and convenience, it offers a family-friendly setting with an array of amenities designed for travelers like you.",
+          "location": {
+            "Latitude": "45.5434208",
+            "Longitude": "13.7343053"
+          },
+          "review": 3,
+          "comments": [
+            {
+              "user": "Deon K",
+              "body": "Treat this hotel as if it has NO air con.  Do not stay here during the warmer half of the year. If on business, you will be dead in the water the next day"
+            },
+            {
+              "user": "Beat H",
+              "body": "Just staid here for a couple of nights and it was ok. All you needed - clean large room, good breakfast, free and fast WiFi and free parking. Would not stay here for a romantic holiday but for everything else it’s a great fit. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Resturants",
+      "content": [
+        {
+          "name": "Hostel Villa Domus",
+          "description": "best icecream in Koper",
+          "location": {
+            "Latitude": "45.546131",
+            "Longitude": "13.726000"
+          },
+          "review": 5,
+          "comments": [
+            {
+              "user": "Stan H",
+              "body": "Very good experience"
+            }
+          ]
+        },
+        {
+          "name": "Sladolarna",
+          "description": "best icecream in Koper",
+          "location": {
+            "Latitude": "45.546131",
+            "Longitude": "13.726000"
+          },
+          "review": 5,
+          "comments": [
+            {
+              "user": "Stan H",
+              "body": "Went a few times during our stay, grandson has severe egg allergy, son-in-law has severe nut allergy yet the owner and his wife completely re-assured us to not have worries and you could see already just by the fact that each flavor had its own serving spoon that they were seriously cautious about it. Something truly exceptional!"
+            },
+            {
+              "user": "Adam",
+              "body": "This is the best icecream in Slovenia,lot of intresting flavours,for me was most intresting curcuma,with candized lime and lemon peels."
+            },
+            {
+              "user": "Jasmina L",
+              "body": "If you want the best vegan ice cream and a variety of options - this is the place to be! The prices are normal. Sometimes they also offer vegan lava cake, which is amazing!"
+            },
+            {
+              "user": "Lana78",
+              "body": "It seems that the best places are around the local 'Trznica'. If you enjoy a great quality ice cream & sorbet, this is definitely the best place for it. If you are lactose intolerant, you’ll totally get head over heels with the choice they have. Vegan pistachio, peach with lavender, passion fruit with strawberry were delicious but the cucumber/parsley/pineapple was just amaze balls. Surprising and refreshing. ❤️❤️❤️"
+            },
+            {
+              "user": "Sav & Jelly",
+              "body": "Congratulations Sladoledarna guys, one of the best ice creams I have ever had in my life! I just tried your Kurkuma, Apple Cinnamon, Sacher Torte...great genuine tastes of the ingredients!"
+            },
+            {
+              "user": "nefertari1313",
+              "body": "This place has amazing ice cream. There is so much tastes. I tried curcuma and rose and... it is unbelievably yummy. If you are in Koper you have to try it."
+            }
+          ]
+        },
+        {
+          "name": "Capra",
+          "description": "The Mediterranean restaurant Capra is open since 2014 and offers high quality locally inspired cuisine with an international touch in a magical atmosphere. Part of the 4-star Grand Koper hotel, just a few metres from the sea. Receiver of the Falstaff Award in 2021, 2022 and 2023, listed in Gault Millau Slovenia as one of the best restaurants.",
+          "location": {
+            "Latitude": "45.547115",
+            "Longitude": "13.725992"
+          },
+          "review": 4,
+          "comments": [
+            {
+              "user": "Ivana B",
+              "body": "Had a fantastic experience at the Capra restaurant. The ambiance was cozy and welcoming, the food was fresh and flavourful, and every dish was well-prepared. The staff was friendly and attentive, making sure we had everything we needed. Left very satisfied—can’t wait to come back!"
+            },
+            {
+              "user": "Gluha Z",
+              "body": "We visited Capra for the second time this year. This time for 'Teden restavracij' and although I had the meat menu, my wifes fish menu was out of this world. The wine selection was also nice. Would recommend to anyone."
+            },
+            {
+              "user": "Matej F",
+              "body": "Very delicious food, great service! Well done! See you again soon. #fishtriopremium #rawscampi #grilledfish #perfectwine"
+            },
+            {
+              "user": "Sandra K",
+              "body": "This restaurant was good but now is awful, food was disaster. No texture in food and absolutely no taste. I had pasta. Pizza is better at Mcdonald. Squid came without lemon and not baked enough."
+            },
+            {
+              "user": "Tilen Stanic",
+              "body": "The food, poor, priciee and super lazy menu. They have bruschettas on the menu, costing like a pasta dish elsewhere. Out of 5 dishes 1 was ok, everything else not good "
+            },
+            {
+              "user": "Danjela J",
+              "body": "We chose this wonderful location for a family party and we are grateful for everything: from the perfect organization of the event to the very professional service, from the highest cuisine to the dreamy atmosphere. Very satisfied!"
+            },
+            {
+              "user": "Ofir A",
+              "body": "Pricey, not that tasty, long waiting times for the food (really long), and not that good of a service "
+            },
+            {
+              "user": "curly",
+              "body": "Mostly mediocre food. Nice desserts: taste and presentation. Bring a 'compliment' of breadstick and butter and then change 1,5 Tried to change double on the card "
+            }
+          ]
+        },
+        {
+          "name": "Spageterija in Pizzerija Koper",
+          "description": "The modern culinary offer and a warm, pleasant atmosphere with a selection of Primorska elements create a Mediterranean feel and diversifies your socializing. The central area of the restaurant, renovated in 2009, has a capacity of 60 seats, the winter-summer garden 30 seats and the open garden 150 seats.",
+          "location": {
+            "Latitude": "46.228827",
+            "Longitude": "15.265846"
+          },
+          "review": 4,
+          "comments": [
+            {
+              "user": "Mario J",
+              "body": "Me and my wife visited this pizzeria and everything was to be commended if you like pizza then this place is a great choice congratulations"
+            },
+            {
+              "user": "CaseyandSue",
+              "body": "Found this little pizzeria in Celje while on the road from Ljubljana to Zagreb. Reasonable pizza but looked to be well liked by the locals."
+            },
+            {
+              "user": "Maja H",
+              "body": "I am a local and this used to be a very good restaurant. Now is a shadow of what it was. Overpricy considering the quality of the ingredients. "
+            },
+            {
+              "user": "Kate",
+              "body": "Place has such warm, friendly and homey feel. Food was great with a fair price, service went above and beyond. Would reccomend!!"
+            },
+            {
+              "user": "Mirka M",
+              "body": "A lot of choices of food.  Everything was really fast.  Waiter was also kind and professional. Really tasty. Also prices are good."
+            },
+            {
+              "user": "Trek149698",
+              "body": "Had to wait 20 mins to get a menu, then another 40 mins to get drinks, then after another 30 mins some food arrived but only for 5 of us. The 6th person ordered pasta with beef which never arrived. When asked, the waiter simply replied 'but we have run out of beef'. Don't go there if you are hungry"
+            },
+            {
+              "user": "Venda N",
+              "body": "Slow waiter, undercooked risoto, warm beer, waiting for pay more then one hour…crazy…not recommend…."
             }
           ]
         }
       ]
     }
-  ]
-  ,
+  ],
   "liked": [
+    {
+      "name": "Sladolarna",
+      "description": "best icecream in Koper",
+      "location": {
+        "Latitude": "45.546131",
+        "Longitude": "13.726000"
+      },
+      "review": 5,
+      "comments": [
         {
-          "name": "Pub",
-          "description": "best beer in town",
-          "review": 4,
-          "comments": [
-            {
-              "user": "pussyenjoyer69",
-              "body": "i loved the place"
-            }
-          ]
+          "user": "Stan H",
+          "body": "Went a few times during our stay, grandson has severe egg allergy, son-in-law has severe nut allergy yet the owner and his wife completely re-assured us to not have worries and you could see already just by the fact that each flavor had its own serving spoon that they were seriously cautious about it. Something truly exceptional!"
+        },
+        {
+          "user": "Adam",
+          "body": "This is the best icecream in Slovenia,lot of intresting flavours,for me was most intresting curcuma,with candized lime and lemon peels."
+        },
+        {
+          "user": "Jasmina L",
+          "body": "If you want the best vegan ice cream and a variety of options - this is the place to be! The prices are normal. Sometimes they also offer vegan lava cake, which is amazing!"
+        },
+        {
+          "user": "Lana78",
+          "body": "It seems that the best places are around the local 'Trznica'. If you enjoy a great quality ice cream & sorbet, this is definitely the best place for it. If you are lactose intolerant, you’ll totally get head over heels with the choice they have. Vegan pistachio, peach with lavender, passion fruit with strawberry were delicious but the cucumber/parsley/pineapple was just amaze balls. Surprising and refreshing. ❤️❤️❤️"
+        },
+        {
+          "user": "Sav & Jelly",
+          "body": "Congratulations Sladoledarna guys, one of the best ice creams I have ever had in my life! I just tried your Kurkuma, Apple Cinnamon, Sacher Torte...great genuine tastes of the ingredients!"
+        },
+        {
+          "user": "nefertari1313",
+          "body": "This place has amazing ice cream. There is so much tastes. I tried curcuma and rose and... it is unbelievably yummy. If you are in Koper you have to try it."
         }
+      ]
+    }
   ],
   "isModerator": false
+
 }

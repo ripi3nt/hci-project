@@ -19,6 +19,10 @@ const AddActivity: React.FC = () => {
       description,
       review,
       comments: [],
+      location: {
+        Longitude: "0.0",
+        Latitude: "0.0"
+      }
     };
 
     const categoryIndex = db.categories.findIndex(
@@ -31,7 +35,7 @@ const AddActivity: React.FC = () => {
       console.log("Activity added:", newActivity);
       navigate("/");
     } else {
-      db.categories.push({category: category, content: [{name: name, description: description, review: review, comments: []}]});
+      db.categories.push({category: category, content: [{name: name, description: description, review: review, comments: [], location: {Longitude: "0,0", Latitude: "0,0"}}]});
       console.log("Activity added:", newActivity);
       navigate("/");
     }
