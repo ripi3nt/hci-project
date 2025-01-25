@@ -7,15 +7,17 @@ import {
   TextField,
 } from "@mui/material";
 import Favorite from "@mui/icons-material/Favorite"; // Import the Favorite icon
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import db from "../db/activies.json";
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+import Header from "../components/header";
+
+
+  const reccs = Math.floor(Math.random() * 100);
 
 const Review: React.FC = () => {
   const { reviewid } = useParams<{ reviewid: string }>();
-  const navigate = useNavigate();
 
   // State for the new comment
   const [newComment, setNewComment] = useState<string>("");
@@ -59,17 +61,19 @@ const Review: React.FC = () => {
     } else {
       db.liked = db.liked.filter((el) => el.name !== reviewid);
     }
+
+    alert("View liked activites in the profile tab");
   };
 
   const position: [number, number] = [parseFloat(activity!.location.Latitude), parseFloat(activity!.location.Longitude)];
+
 
   return (
     <Stack spacing={3} padding={2}>
       <Stack direction={"row"} justifyContent={"space-between"}>
         {/* Activity Title */}
-        <Typography variant="h4" fontWeight="bold">
-          {activity!.name}
-        </Typography>
+
+        <Header title={activity!.name}/>
 
         {/* Like Button (Heart) */}
         <Button onClick={handleLike} variant="text">
@@ -81,11 +85,6 @@ const Review: React.FC = () => {
           />
         </Button>
       </Stack>
-
-      {/* Back Button */}
-      <Button onClick={() => navigate(-1)} variant="text">
-        {"<"} Back
-      </Button>
 
       {/* Map */}
       <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{width: "100%", height: 200}}>
@@ -99,15 +98,17 @@ const Review: React.FC = () => {
         </Marker>
       </MapContainer>
       {/* Rating and Recommendations */}
+      <Typography variant="h6" fontWeight="bold">Review</Typography>
       <Stack direction="row" alignItems="center" spacing={2}>
         <Rating value={activity!.review} readOnly />
         <Typography variant="body2" color="text.secondary">
-          {Math.floor(Math.random() * 100)} recommendations
+          {reccs} recommendations
         </Typography>
       </Stack>
 
       {/* Review Section */}
       <Stack spacing={2}>
+          <Typography variant="h6" fontWeight="bold">Comments</Typography>
         {comments.map((comment, index) => (
           <Stack key={index} direction="row" spacing={2} alignItems="center">
             <Avatar />
@@ -153,9 +154,5 @@ const Review: React.FC = () => {
     </Stack>
   );
 };
-
-L.Icon.Default.mergeOptions({
-  iconUrl: "/marker-icon.png",
-})
 
 export default Review;
