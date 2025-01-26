@@ -281,6 +281,27 @@
       ]
     }
   ],
-  "isModerator": false
-
+  "isModerator": false,
+  "activities": [
+    { "name": "Sports" },
+    { "name": "Hiking" },
+    { "name": "Cycling" },
+    { "name": "Photography" },
+    { "name": "Camping" },
+    { "name": "Fishing" },
+    { "name": "Boating" },
+    { "name": "Clubing" },
+    { "name": "Family activities" },
+    { "name": "Wine Tasting" },
+    { "name": "Music" },
+    { "name": "Theater" },
+    { "name": "Art Galleries" },
+    { "name": "History" },
+    { "name": "Festivals" },
+    { "name": "Cooking Classes" },
+    { "name": "Yoga" },
+    { "name": "Spa Retreats" },
+    { "name": "Dancing" },
+    { "name": "Shopping" }
+  ]
 }

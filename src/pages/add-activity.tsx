@@ -1,6 +1,5 @@
-import { Button, Stack, TextField } from "@mui/material";
+import { Button, MenuItem, Snackbar, Stack, TextField } from "@mui/material";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import db from "../db/activies.json";
 import Header from "../components/header";
 
@@ -11,7 +10,7 @@ const AddActivity: React.FC = () => {
   const [category, setCategory] = useState<string>(
     db.categories[0]?.category || ""
   );
-  const navigate = useNavigate();
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleAddActivity = () => {
     const newActivity = {
@@ -33,12 +32,16 @@ const AddActivity: React.FC = () => {
       db.categories[categoryIndex].content.push(newActivity);
       // Ideally, save to a database or server here.
       console.log("Activity added:", newActivity);
-      navigate("/");
+      setSnackbarOpen(true);
     } else {
       db.categories.push({category: category, content: [{name: name, description: description, review: review, comments: [], location: {Longitude: "0,0", Latitude: "0,0"}}]});
       console.log("Activity added:", newActivity);
-      navigate("/");
+      setSnackbarOpen(true);
     }
+    setName("");
+    setDescription("");
+    setReview(0);
+    setCategory("");
   };
 
   return (
@@ -76,7 +79,10 @@ const AddActivity: React.FC = () => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         fullWidth
-      ></TextField>
+        select
+      >
+      {db.activities.map((el) => <MenuItem key={el.name} value={el.name}>{el.name}</MenuItem>)}
+      </TextField>
 
       {/* Submit Button */}
       <Button
@@ -89,6 +95,7 @@ const AddActivity: React.FC = () => {
       >
         Add Activity
       </Button>
+      <Snackbar open={snackbarOpen} autoHideDuration={5000} message="Successfully added new activity" />
     </Stack>
   );
 };

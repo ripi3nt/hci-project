@@ -5,6 +5,7 @@ import {
   Rating,
   Button,
   TextField,
+  Snackbar,
 } from "@mui/material";
 import Favorite from "@mui/icons-material/Favorite"; // Import the Favorite icon
 import { useParams } from "react-router-dom";
@@ -58,15 +59,16 @@ const Review: React.FC = () => {
     if(updatedLiked) {
 
       db.liked = [...db.liked, activity!];
+      setSnackbarOpen(true);
     } else {
       db.liked = db.liked.filter((el) => el.name !== reviewid);
     }
 
-    alert("View liked activites in the profile tab");
   };
 
   const position: [number, number] = [parseFloat(activity!.location.Latitude), parseFloat(activity!.location.Longitude)];
 
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   return (
     <Stack spacing={3} padding={2}>
@@ -151,6 +153,7 @@ const Review: React.FC = () => {
         Description
       </Typography>
       <Typography variant="body1">{activity?.description}</Typography>
+      <Snackbar open={snackbarOpen} autoHideDuration={5000} onClose={() => {setSnackbarOpen(false)}} message="Liked page. You can view liked pages in the profile tab"/>
     </Stack>
   );
 };

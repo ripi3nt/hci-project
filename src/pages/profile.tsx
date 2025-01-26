@@ -1,5 +1,6 @@
 import {
   Button,
+  Snackbar,
   Stack,
   Typography,
 } from "@mui/material";
@@ -7,19 +8,22 @@ import { useNavigate } from "react-router-dom";
 import { ActivityCard } from "./Home";
 import db from "../db/activies.json"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useState } from "react";
 // Dummy saved activities for demonstration
 const Profile: React.FC = () => {
   const navigate = useNavigate();
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleSignUpForModerator = () => {
     // Add logic for moderator sign-up here (e.g., API call or form submission)
-    alert("You have signed up to become a moderator!");
+    setSnackbarOpen(true);
     db.isModerator = true;
   };
 
   const savedActivities = db.liked;
 
   const isModerator = db.isModerator;
+
 
   return (
     <Stack spacing={4} padding={2}>
@@ -67,6 +71,7 @@ const Profile: React.FC = () => {
           </Typography>
         )}
       </Stack>
+      <Snackbar open={snackbarOpen} autoHideDuration={7000}  message="You have successfully signed up for moderator. You can now add new activites in the home page."/>
    </Stack>
   );
 };
